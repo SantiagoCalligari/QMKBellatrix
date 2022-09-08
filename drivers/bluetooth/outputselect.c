@@ -14,13 +14,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "outputselect.h"
 
-#if defined(PROTOCOL_LUFA)
-#    include "lufa.h"
-#endif
-
-#ifdef MODULE_ADAFRUIT_BLE
-#    include "adafruit_ble.h"
-#endif
+#include "adafruit_ble.h"
 
 uint8_t desired_output = OUTPUT_DEFAULT;
 
@@ -40,9 +34,7 @@ void set_output(uint8_t output) {
 __attribute__((weak)) void set_output_user(uint8_t output) {}
 
 static bool is_usb_configured(void) {
-#if defined(PROTOCOL_LUFA)
-    return USB_DeviceState == DEVICE_STATE_Configured;
-#endif
+    return true;
 }
 
 /** \brief Auto Detect Output

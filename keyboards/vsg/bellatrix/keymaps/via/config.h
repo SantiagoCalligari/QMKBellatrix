@@ -17,7 +17,7 @@
 
 #pragma once
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
+#define DYNAMIC_KEYMAP_LAYER_COUNT 4
 
 /* Enable RGB Matrix */
 #define VIA_QMK_RGBLIGHT_ENABLE
